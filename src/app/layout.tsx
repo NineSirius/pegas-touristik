@@ -1,3 +1,5 @@
+import { Navigation } from '@/components/Navigation'
+
 import './globals.sass'
 import { Nunito } from 'next/font/google'
 
@@ -11,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="ru">
-            <body className={nunito.className}>{children}</body>
+            <body className={nunito.className}>
+                <Navigation />
+                <main className="wrapper">{children}</main>
+            </body>
         </html>
     )
 }
