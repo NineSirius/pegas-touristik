@@ -25,19 +25,64 @@ const Card = () => {
         >
           <Image
             src="/img1.png"
-            width={100}
-            height={100}
-            alt="Изображение автора"
+            className={styles.img}
+            width={220}
+            height={350}
+            alt="Изображение"
           />
         </div>
         <div className={styles.flexItem_wrap}>
           <div className={styles.item}>
-            <div className={styles.flexItem2}>Блок 2</div>
-            <div className={styles.flexItem2}>Блок 3</div>
+            <div
+              className={styles.flexItem2}
+              onClick={() => handleImageClick("/img2.png")}
+            >
+              <Image
+                className={styles.img}
+                src="/img2.png"
+                width={220}
+                height={170}
+                alt="Изображение"
+              />
+            </div>
+            <div
+              className={styles.flexItem2}
+              onClick={() => handleImageClick("/img3.png")}
+            >
+              <Image
+                className={styles.img}
+                src="/img3.png"
+                width={220}
+                height={170}
+                alt="Изображение"
+              />
+            </div>
           </div>
           <div className={styles.item2}>
-            <div className={styles.flexItem2}>Блок 4</div>
-            <div className={styles.flexItem2}>Блок 5</div>
+            <div
+              className={styles.flexItem2}
+              onClick={() => handleImageClick("/img4.png")}
+            >
+              <Image
+                className={styles.img}
+                src="/img4.png"
+                width={220}
+                height={170}
+                alt="Изображение"
+              />
+            </div>
+            <div
+              className={styles.flexItem2}
+              onClick={() => handleImageClick("/img5.png")}
+            >
+              <Image
+                className={styles.img}
+                src="/img5.png"
+                width={220}
+                height={170}
+                alt="Изображение"
+              />
+            </div>
           </div>
         </div>
       </div>
