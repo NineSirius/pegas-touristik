@@ -6,7 +6,7 @@ const Down = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.wrapper_container}>
-        <h3 className={styles.post_title}>Каталог стран и отелей</h3>
+        <h3 className={styles.post_title_catalog}>Каталог стран и отелей</h3>
         <div className={styles.catalog_cards}>
           <div className={styles.catalog_card}>
             <Image
