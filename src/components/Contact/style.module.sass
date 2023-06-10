@@ -1,0 +1,67 @@
+.container
+    max-width: 1280px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    margin: auto
+    &__map
+        margin: auto !important
+        width: 100% !important
+.card
+    background-image: url("../../../public/banner.png")
+    background-size: cover
+    background-repeat: no-repeat
+    width: 100%
+    display: flex
+    flex-direction: column
+    padding: 30px
+    gap: 5px
+    border: 1px solid #E6E8EB
+    border-radius: 24px
+    margin: auto
+    margin-bottom: -20px
+    z-index: 4
+    &__title
+        font-family: 'Nunito'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        line-height: 28px
+        color: #2B3F5A
+.contact
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr))
+    gap: 100px
+    &__data
+        display: flex
+        flex-direction: column
+        gap: 15px
+        &__title
+            display: flex
+            flex-direction: column
+            font-family: 'Nunito'
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            text-decoration-line: underline
+            color: #2B3F5A
+        &__tel
+            display: flex
+            flex-direction: column
+            &__link
+                font-family: 'Nunito'
+                font-style: normal
+                font-weight: 400
+                font-size: 14px
+                line-height: 29px
+                text-decoration-line: underline
+                color: #1087DC
+        &__span
+            font-family: 'Nunito'
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            color: rgba(43, 63, 90, 0.6)
