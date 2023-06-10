@@ -2,6 +2,7 @@ import { Navigation } from '@/components/Navigation'
 
 import './globals.sass'
 import { Nunito } from 'next/font/google'
+import { Footer } from '@/components/Footer'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={nunito.className}>
                 <Navigation />
                 <main className="wrapper">{children}</main>
+                <Footer />
             </body>
         </html>
     )

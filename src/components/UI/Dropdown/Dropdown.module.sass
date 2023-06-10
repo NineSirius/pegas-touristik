@@ -7,6 +7,7 @@
     align-items: center
     gap: 8px
     background: unset
+    outline: none
     border: unset
     font-size: 0.875rem
     color: #2B3F5A
@@ -20,10 +21,10 @@
     top: 30px
     display: flex
     flex-direction: column
-    left: 0
+    right: 0
     min-width: 200px
     width: max-content
-    max-width: 100%
+    max-width: 400px
     border-radius: 10px
     overflow: hidden
     visibility: hidden
@@ -40,8 +41,39 @@
       padding: 8px 20px
       font-size: 0.875rem
       color: #2B3F5A
+      display: inline-flex
+      flex-direction: column
       text-decoration: none
       background: #fff
 
       &:hover
         background: #EEF2F8
+
+      &-tip
+        font-weight: 500
+        font-size: 0.875rem
+        color: rgba(43, 63, 90, 0.4)
+
+@media screen and (max-width: 800px )
+  .dropdown
+    width: 100%
+
+    &-content
+      position: unset
+      width: 100%
+      height: 0
+      border-radius: unset
+
+      &.active
+        margin-top: 10px
+        height: max-content
+
+    .dropbtn
+      width: 100%
+      padding: 10px
+
+      &:hover
+        background: #EEF2F8
+
+    &-link
+      border-radius: 10px

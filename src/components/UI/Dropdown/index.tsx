@@ -6,32 +6,31 @@ import clsx from 'clsx'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
 interface dataItem {
-    title: string
+    title: React.ReactNode
+    tip?: string
     path: string
+    icon?: React.ReactNode
 }
 
 interface props {
     data: dataItem[]
     title: React.ReactNode
+    icon?: React.ReactNode
 }
 
-export const Dropdown: React.FC<props> = ({ data, title }) => {
+export const Dropdown: React.FC<props> = ({ data, title, icon }) => {
     const [isActive, setIsActive] = useState<boolean>(false)
     const dropdownRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
-        // Функция-обработчик события клика
         const handleClickOutside = (event: MouseEvent) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                // Если клик был сделан вне элемента Dropdown, скрыть его
                 setIsActive(false)
             }
         }
 
-        // Добавление слушателя события клика при монтировании компонента
         document.addEventListener('click', handleClickOutside)
 
-        // Удаление слушателя события клика при размонтировании компонента
         return () => {
             document.removeEventListener('click', handleClickOutside)
         }
@@ -43,7 +42,7 @@ export const Dropdown: React.FC<props> = ({ data, title }) => {
                 className={styles['dropbtn']}
                 onClick={() => setIsActive((isActive) => !isActive)}
             >
-                {title} {isActive ? <FaChevronUp /> : <FaChevronDown />}
+                {icon && icon} {title} {isActive ? <FaChevronUp /> : <FaChevronDown />}
             </button>
             <div className={clsx(styles['dropdown-content'], isActive && styles.active)}>
                 {data.map((item) => {
@@ -53,7 +52,10 @@ export const Dropdown: React.FC<props> = ({ data, title }) => {
                             href={item.path}
                             className={styles['dropdown-link']}
                         >
-                            {item.title}
+                            <span className={styles['dropdown-link-tip']}>{item.tip}</span>
+                            <p>
+                                {item.icon && item.icon} {item.title}{' '}
+                            </p>
                         </Link>
                     )
                 })}
