@@ -1,9 +1,14 @@
 import styles from "./About.module.sass";
 import {} from "../../../public/background-about.png";
 import MainBlueBlog from "../Main_order_blue";
+import Banner from "../Banner";
 const About = () => {
   return (
     <>
+      <Banner
+        title="О компании"
+        desc="Официальное представительство PEGAS Touristik (Туристическое Агентство «КАМ АНД ФЛАЙ», работаем с 2008 года как официальная точка продаж туристических услуг."
+      />
       <div className={styles.cont}>
         <div className={styles.card}>
           <span className={styles.title}>

@@ -1,0 +1,107 @@
+.select
+  position: relative
+  top: -5rem
+  display: flex
+  flex-direction: column
+  max-width: 80rem
+  margin: auto
+  padding: 1.25rem
+  background: #fff
+  border: 1px solid #E6E8EB
+  border-radius: 1.4375rem
+  &--title
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    > div > p
+      color: #BAC0C9
+    > div > h3
+      font-size: 1.25rem
+    > button
+      border: none
+      border-radius: 1.5rem
+      background: #E6E8EB
+      color: #BAC0C9
+      padding: .75rem 2rem
+  &--search
+    margin-top: 1.875rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 1.25rem
+    background: #E6E8EB
+    padding: 1.375rem
+    border-radius: 2.8125rem
+    > div:last-child
+      > div > label
+        width: 100%
+    > div
+      display: flex
+      gap: .3125rem
+      align-items: center
+    > div > hr
+      border: none
+      width: .125rem
+      background: #ccc
+      height: 1.375rem
+    > div > button
+      border: none
+      border-radius: 1.5rem
+      background: #1087DC
+      color: #fff
+      width: 23.4375rem
+      padding: .75rem 2rem
+  &--input
+    display: flex
+    align-items: center
+    gap: .3125rem
+    width: 100%
+    input
+      border: none
+      width: 70%
+      outline: none
+      background: none
+    input[type="date"]
+      position: relative
+    input[type="date"]::-webkit-calendar-picker-indicator
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      width: auto
+      height: auto
+      color: transparent
+      background: transparent
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-clear-button
+      z-index: 1
+
+.active
+  background: #1087DC !important
+  color: #fff !important
+
+@media screen and (max-width: 59.0625rem)
+  .select
+    &--search
+      flex-direction: column
+      justify-content: center
+      > div:last-child
+        flex-direction: column
+        gap: 1.25rem
+        > div > label
+          width: 100%
+        >button
+          width: 100%
+        > hr
+          display: none
+        > div
+          width: 100%
+    &--input
+      > input
+        width: 100%
+    &--title
+      flex-direction: column
+      gap: 1.25rem
+      text-align: center

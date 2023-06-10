@@ -57,10 +57,18 @@ const Catalogs = () => {
         slidesPerView={3}
         centeredSlides={false}
         spaceBetween={30}
-        pagination={{
-          type: "fraction",
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          890: {
+            slidesPerView: 3,
+          },
         }}
-        navigation={true}
+        navigation
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
