@@ -55,7 +55,7 @@ const Catalogs = () => {
       <Swiper
         onSwiper={setSwiperRef}
         slidesPerView={3}
-        centeredSlides={true}
+        centeredSlides={false}
         spaceBetween={30}
         pagination={{
           type: "fraction",
