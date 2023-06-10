@@ -1,0 +1,46 @@
+.main_block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  // text-align: center
+  margin-top: 65px
+  padding: 65px
+  max-width: 100%
+  border-radius: 12px
+  background: url('/images/bg_main_block.png')
+  background-size: cover
+  &_title
+    color: #fff
+    font-weight: 700
+    font-size: 24px
+    line-height: 33px
+  .text_main
+    padding-top: 12px
+    font-weight: 400
+    font-size: 16px
+    line-height: 22px
+    color: rgba(255, 255, 255, 0.5)
+
+.btn
+  padding: 12px 32px
+  background: #1087DC
+  border: 1px solid #1087DC
+  border-radius: 200px
+  font-weight: 500
+  font-size: 14px
+  cursor: pointer
+  color: #FFFFFF
+
+@media screen and (max-width: 1030px)
+  .main_block
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+@media screen and ( max-width: 470px )
+  .main_block
+    display: flex
+    justify-content: center
+  .btn
+    margin-right: 220px
+    font-size: 12px
